@@ -5,7 +5,8 @@ from BeautifulSoup import BeautifulSoup
 from urllib import urlopen
 import MeCab
 
-f = open('editorial.txt', 'a')
+filepath = sys.argv[1]
+f = open(filepath, 'a')
 mec = MeCab.Tagger('-Ochasen')
 url = "http://www.geocities.jp/ktaro38/rss.xml"
 soup = BeautifulSoup(urlopen(url))
